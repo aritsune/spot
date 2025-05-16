@@ -373,7 +373,7 @@ pub mod tests {
 
         assert_eq!(state.current_screen(), &new_screen);
         assert_eq!(state.count(), 2);
-        assert_eq!(state.artist_state("some_id").is_some(), true);
+        assert!(state.artist_state("some_id").is_some());
     }
 
     #[test]

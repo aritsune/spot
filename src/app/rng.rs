@@ -128,7 +128,6 @@ mod tests {
     fn get_sequence(n: usize) -> Vec<usize> {
         let mut rng = rng_for_test();
         (0..n)
-            .into_iter()
             .map(|_| rng.next_u64() as usize)
             .collect()
     }
@@ -154,7 +153,6 @@ mod tests {
         index.grow(5);
 
         let mut values = (0..5)
-            .into_iter()
             .filter_map(|_| index.next())
             .collect::<Vec<usize>>();
         let sorted = &mut values[..];

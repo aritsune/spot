@@ -79,3 +79,9 @@ impl ReleaseDetailsDialog {
         widget.copyright.set_text(copyright);
     }
 }
+
+impl Default for ReleaseDetailsDialog {
+    fn default() -> Self {
+        Self::new()
+    }
+}

@@ -307,7 +307,7 @@ mod tests {
 
         let batches = batch.resize(2);
         assert_eq!(batches.len(), 2);
-        assert_eq!(&batches.get(0).unwrap().songs.get(0).unwrap().id, "1");
-        assert_eq!(&batches.get(1).unwrap().songs.get(0).unwrap().id, "3");
+        assert_eq!(&batches.first().unwrap().songs.first().unwrap().id, "1");
+        assert_eq!(&batches.get(1).unwrap().songs.first().unwrap().id, "3");
     }
 }
